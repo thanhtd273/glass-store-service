@@ -10,14 +10,6 @@ pipeline {
         REDIS_PASSWORD = 123456
     }
     stages {
-        stage('Checkout') {
-            steps {
-                script {
-                    checkout sm
-                }
-            }
-        }
-
         stage('Build and Test') {
             steps {
                 script {

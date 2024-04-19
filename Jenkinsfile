@@ -31,6 +31,6 @@ pipeline {
                     service = docker.build("trinhdinhthanh/glass-store")
                 }
             }
-
+        }
     }
 }

@@ -14,10 +14,7 @@ pipeline {
         REDIS_PASSWORD = 123456
     }
     stages {
-        stage('Clone repository') {
-            checkout scm
-        }
-        
+
         stage('Build and Test') {
             steps {
                 script {

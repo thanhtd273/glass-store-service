@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def service
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "M3"
@@ -26,9 +27,10 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t trinhdinhthanh/glass-store-service:latest .'
+                    // sh 'docker build -t trinhdinhthanh/glass-store-service:latest .'
+                    service = docker.build("trinhdinhthanh/glass-store")
                 }
             }
-        }
+
     }
 }

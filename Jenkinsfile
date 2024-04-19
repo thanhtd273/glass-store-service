@@ -3,7 +3,6 @@ pipeline {
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "M3"
-        docker "docker"
     }
     environment {
         PORT = 8084
@@ -15,6 +14,10 @@ pipeline {
         REDIS_PASSWORD = 123456
     }
     stages {
+        stage('Clone repository') {
+            checkout scm
+        }
+        
         stage('Build and Test') {
             steps {
                 script {

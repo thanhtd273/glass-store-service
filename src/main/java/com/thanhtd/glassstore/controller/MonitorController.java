@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/glass-store/monitor")
+@RequestMapping(value = "/glass-store/health-check")
 public class MonitorController {
     @GetMapping(value = "/echo")
     public APIResponse echo() {

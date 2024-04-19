@@ -34,3 +34,7 @@ build/
 
 ### Log ##
 *.log*
+
+####### Environment #############
+*.env
+docker-compose.yaml
